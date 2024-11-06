@@ -7,7 +7,7 @@ def getRegKeyClassName(subkey, hkey, verbose):
         print(f"Opening Registry Key: {subkey}...")
 
     try:
-        key = winreg.OpenKeyEx(hkey, subkey, 0, winreg.KEY_ALL_ACCESS)
+        key = winreg.OpenKeyEx(hkey, subkey, 0, winreg.KEY_READ)
         if verbose:
             print(f"Successfully Opened Key: {subkey}")
     except Exception as e:
